@@ -25,6 +25,7 @@ class CalendarListItem extends Component {
     if (row.getTime) {
       return (
         <Calendar
+          {...this.props}
           jalali={this.props.jalali}
           theme={this.props.theme}
           style={[{height: this.props.calendarHeight, width: this.props.calendarWidth}, this.style.calendar]}
@@ -45,7 +46,6 @@ class CalendarListItem extends Component {
           dayComponent={this.props.dayComponent}
           disabledByDefault={this.props.disabledByDefault}
           showWeekNumbers={this.props.showWeekNumbers}
-          {...this.props}
         />);
     } else {
       const text = row.toString();
