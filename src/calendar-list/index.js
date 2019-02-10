@@ -220,6 +220,7 @@ class CalendarList extends Component {
         //snapToInterval={this.calendarHeight}
         removeClippedSubviews={this.props.removeClippedSubviews}
         pageSize={1}
+        extraData={this.props.compact}
         horizontal={this.props.horizontal}
         pagingEnabled={this.props.pagingEnabled}
         onViewableItemsChanged={this.onViewableItemsChangedBound}

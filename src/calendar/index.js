@@ -259,7 +259,7 @@ class Calendar extends Component {
       const weekDays = days.splice(0, 7);
       if (this.props.compact) {
         let selectedWeek = false;
-        for (let i=0, i<7, i++) {
+        for (let i=0; i<7; i++) {
           const dayMarked = this.props.markedDates[weekDays[i].toString('yyyy-MM-dd')];
           if (dayMarked && dayMarked.selected) {
             selectedWeek = true;
