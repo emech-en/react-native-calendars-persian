@@ -252,10 +252,12 @@ class Calendar extends Component {
 
   render() {
     const days = dateutils.page(this.state.currentMonth, this.props.firstDay, this.props.jalali); // # jalali
+    console.log('days', days);
     const weeks = [];
     while (days.length) {
       weeks.push(this.renderWeek(days.splice(0, 7), weeks.length));
     }
+    console.log('weeks', weeks);
     let indicator;
     const current = parseDate(this.props.current);
     if (current) {

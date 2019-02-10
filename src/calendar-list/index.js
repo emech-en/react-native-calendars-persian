@@ -233,6 +233,7 @@ class CalendarList extends Component {
         getItemLayout={this.getItemLayout}
         scrollsToTop={this.props.scrollsToTop}
         inverted={this.props.inverted}
+        scrollEnabled={!this.props.compact}
       />
     );
   }
