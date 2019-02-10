@@ -28,7 +28,7 @@ class CalendarListItem extends Component {
           {...this.props}
           jalali={this.props.jalali}
           theme={this.props.theme}
-          style={[{height: this.props.calendarHeight, width: this.props.calendarWidth}, this.style.calendar]}
+          style={[{width: this.props.calendarWidth}, this.style.calendar]}
           current={row}
           hideArrows={this.props.hideArrows}
           hideExtraDays={this.props.hideExtraDays}
@@ -50,7 +50,7 @@ class CalendarListItem extends Component {
     } else {
       const text = row.toString();
       return (
-        <View style={[{height: this.props.calendarHeight, width: this.props.calendarWidth}, this.style.placeholder]}>
+        <View style={[{width: this.props.calendarWidth}, this.style.placeholder]}>
           <Text allowFontScaling={false} style={this.style.placeholderText}>{text}</Text>
         </View>
       );

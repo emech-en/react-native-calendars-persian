@@ -45,7 +45,7 @@ class CalendarList extends Component {
     // Dynamic calendar height
     calendarHeight: PropTypes.number,
 
-    // Invert the list 
+    // Invert the list
     inverted: PropTypes.bool
   };
 
@@ -195,7 +195,7 @@ class CalendarList extends Component {
   }
 
   renderCalendar({item}) {
-    return (<CalendarListItem jalali={this.props.jalali} item={item} calendarHeight={this.props.calendarHeight} calendarWidth={this.props.horizontal ? this.props.calendarWidth : undefined  } {...this.props} />);
+    return (<CalendarListItem jalali={this.props.jalali} item={item} calendarWidth={this.props.horizontal ? this.props.calendarWidth : undefined  } {...this.props} />);
   }
 
   getItemLayout(data, index) {
@@ -226,7 +226,7 @@ class CalendarList extends Component {
         renderItem={this.renderCalendarBound}
         showsVerticalScrollIndicator={this.props.showScrollIndicator}
         showsHorizontalScrollIndicator={this.props.showScrollIndicator}
-        scrollEnabled={this.props.scrollingEnabled}
+        scrollEnabled={!this.props.compact && this.props.scrollingEnabled}
         keyExtractor={(item, index) => String(index)}
         ListFooterComponent={this.props.footerComponent}
         initialScrollIndex={this.state.openDate ? this.getMonthIndex(this.state.openDate) : false}
