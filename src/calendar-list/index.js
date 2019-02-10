@@ -44,6 +44,9 @@ class CalendarList extends Component {
     horizontal: PropTypes.bool,
     // Dynamic calendar height
     calendarHeight: PropTypes.number,
+
+    // Invert the list 
+    inverted: PropTypes.bool
   };
 
   static defaultProps = {
@@ -229,6 +232,7 @@ class CalendarList extends Component {
         initialScrollIndex={this.state.openDate ? this.getMonthIndex(this.state.openDate) : false}
         getItemLayout={this.getItemLayout}
         scrollsToTop={this.props.scrollsToTop}
+        inverted={this.props.inverted}
       />
     );
   }
