@@ -61,6 +61,9 @@ class CalendarHeader extends Component {
     if (nextProps.hideDayNames !== this.props.hideDayNames) {
       return true;
     }
+    if (nextProps.hideHeader !=== this.props.hideHeader) {
+      return true;
+    }
     return false;
   }
 
